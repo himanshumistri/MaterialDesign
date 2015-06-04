@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="DesignTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimarydark</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+          which is used to tint widgets -->
+        <item name="colorAccent">@color/accent</item>
+
+
+
+
+    </style>
+
+</resources>

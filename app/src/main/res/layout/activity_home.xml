@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="@color/white"
+    >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coodinate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_next_screen">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+            />
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/abar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@color/tab_bg"
+                app:tabIndicatorColor="@color/tab_indicator"
+                app:tabIndicatorHeight="5dp"
+                app:tabMode="fixed"
+                ></android.support.design.widget.TabLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:layout_anchor="@+id/list_recycle"
+            app:layout_anchorGravity="bottom|right"
+            android:id="@+id/floatin_ab_home"
+
+            />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_next_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="startNextScreen"
+        android:text="@string/next_screen"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:padding="5dp"
+       app:backgroundTint="@color/tab_bg"
+        app:backgroundTintMode="src_over"
+        android:backgroundTint="@color/tab_bg"
+        android:backgroundTintMode="src_over"
+        />
+
+</RelativeLayout>

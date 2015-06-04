@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MaterialDesign</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_collapse_tool_bar">CollapseToolBarActivity</string>
+    <string name="next_screen">Next Screen</string>
+</resources>
