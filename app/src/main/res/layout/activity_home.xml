@@ -60,7 +60,7 @@
             app:layout_anchor="@+id/list_recycle"
             app:layout_anchorGravity="bottom|right"
             android:id="@+id/floatin_ab_home"
-
+            app:fabSize="mini"
             />
 
 

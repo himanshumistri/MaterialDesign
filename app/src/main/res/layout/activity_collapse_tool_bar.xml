@@ -54,6 +54,7 @@
         app:layout_anchorGravity="bottom|left"
 
         android:src="@drawable/ic_content_add"
+        app:fabSize="mini"
         />
 
 
