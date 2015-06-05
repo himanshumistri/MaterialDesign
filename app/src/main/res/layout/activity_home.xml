@@ -61,6 +61,8 @@
             app:layout_anchorGravity="bottom|right"
             android:id="@+id/floatin_ab_home"
             app:fabSize="mini"
+            android:src="@drawable/ic_content_add"
+
             />
 
 
