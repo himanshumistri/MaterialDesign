@@ -34,7 +34,9 @@
                 android:layout_height="wrap_content"
                 android:background="?attr/colorPrimary"
                 android:minHeight="?attr/actionBarSize"
-                app:layout_scrollFlags="scroll|enterAlways">
+                app:layout_scrollFlags="scroll|enterAlways"
+                
+                >
 
 
             </android.support.v7.widget.Toolbar>
@@ -82,9 +84,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:padding="5dp"
-        app:backgroundTint="@color/tab_bg"
-        app:backgroundTintMode="src_over"
-
+        android:backgroundTint="@color/tab_bg"
+        android:backgroundTintMode="src_over"
 
         />
 

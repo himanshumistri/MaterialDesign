@@ -1,10 +1,15 @@
 package com.himotech.matrialdesign;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -38,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private FloatingActionButton mFloatingAb;
 
-
+private AppCompatButton mAppCampatBtn;
 
 
     @Override
@@ -53,6 +58,23 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initView(){
 
+        int[][] states = new int[][] {
+                new int[] { android.R.attr.state_enabled}, // enabled
+                new int[] {-android.R.attr.state_enabled}, // disabled
+                new int[] {-android.R.attr.state_checked}, // unchecked
+                new int[] { android.R.attr.state_pressed}  // pressed
+        };
+
+        int[] colors = new int[] {
+               getResources().getColor(R.color.tab_bg),
+                getResources().getColor(R.color.tab_bg),
+                Color.GREEN,
+                Color.BLUE
+        };
+
+        ColorStateList myList = new ColorStateList(states, colors);
+
+        mAppCampatBtn=(AppCompatButton)findViewById(R.id.btn_next_screen);
 
         mToolBarHome=(Toolbar)findViewById(com.himotech.matrialdesign.R.id.toolbar_home);
 
@@ -83,6 +105,18 @@ public class HomeActivity extends AppCompatActivity {
 
 
         mRecyclerView.setAdapter(mHomeListAdapter);
+
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            mAppCampatBtn.setSupportBackgroundTintList(myList);
+        }else{
+            mAppCampatBtn.setSupportBackgroundTintList(myList);
+            ViewCompat.setBackgroundTintList(mAppCampatBtn,myList);
+        }
+
+
+
+
 
 
     }
