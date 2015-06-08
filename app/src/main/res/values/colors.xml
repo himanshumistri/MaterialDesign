@@ -12,5 +12,20 @@
     <color name="white">#ffffff</color>
 
     <color name="accent">#3F51B5</color>
+    
+    <color name="gray">#B2B1B4</color>
+    
+    <color name="blue">#4790CB</color>
+
+    <color name="yellow">#FBCB25</color>
+
+
+    <color name="txt_folder_name">#555555</color>
+
+    <color name="txt_date">#ADADAD</color>
+
+    <color name="txt_section_title">#747474</color>
+
+    <color name="green">#4DAE50</color>
 
 </resources>
