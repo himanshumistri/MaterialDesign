@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/ubbvand2/AndroidStudioProjects/MaterialDesign/mopub-sdk/assets"/></dataSet><dataSet config="release"><source path="/home/ubbvand2/AndroidStudioProjects/MaterialDesign/mopub-sdk/src/release/assets"/></dataSet></merger>
