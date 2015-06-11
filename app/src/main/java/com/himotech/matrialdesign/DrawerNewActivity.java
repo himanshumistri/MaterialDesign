@@ -1,5 +1,6 @@
 package com.himotech.matrialdesign;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
@@ -119,6 +120,15 @@ public class DrawerNewActivity extends AppCompatActivity implements SiugnupFragm
 
         mFrgFragmentManager.beginTransaction().replace(R.id.id_fragment_holder,mSiugnupFragment,"SignupFragment").commit();
 
+
+
+    }
+
+
+    public void onClickSignup(View mView){
+
+        Intent mImIntent=new Intent(this,AdsListActivity.class);
+        startActivity(mImIntent);
 
     }
 

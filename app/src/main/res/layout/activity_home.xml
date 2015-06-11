@@ -72,7 +72,7 @@
         android:id="@+id/btn_next_screen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/adview"
         android:layout_centerHorizontal="true"
         android:onClick="startNextScreen"
         android:text="@string/next_screen"
@@ -83,6 +83,13 @@
         android:padding="5dp"
         app:backgroundTint="@color/tab_bg"
         app:backgroundTintMode="src_over"
+        />
+
+    <com.mopub.mobileads.MoPubView
+        android:id="@+id/adview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
         />
 
 </RelativeLayout>

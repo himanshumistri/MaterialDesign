@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.himotech.matrialdesign" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,15 +24,42 @@
         </activity>
         <activity
             android:name=".CollapseToolBarActivity"
-            android:label="@string/title_activity_collapse_tool_bar" >
-        </activity>
+            android:label="@string/title_activity_collapse_tool_bar" />
         <activity
             android:name=".NavigationDraweActivity"
-            android:label="@string/title_activity_navigation_drawe" >
-        </activity>
+            android:label="@string/title_activity_navigation_drawe" />
         <activity
             android:name=".DrawerNewActivity"
-            android:label="@string/title_activity_drawer_new" >
+            android:label="@string/title_activity_drawer_new" />
+        <activity
+            android:name="com.mopub.mobileads.MoPubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MraidActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.common.MoPubBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!--
+            <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        -->
+        <activity
+            android:name="com.millennialmedia.android.MMActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            <activity
+            android:name="com.millennialmedia.android.VideoPlayer"
+        -->
+            android:configChanges="keyboardHidden|orientation|keyboard" />
+        <activity
+            android:name=".AdsListActivity"
+            android:label="@string/title_activity_ads_list" >
         </activity>
     </application>
 

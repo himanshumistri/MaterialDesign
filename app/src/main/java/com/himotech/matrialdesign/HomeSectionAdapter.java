@@ -95,7 +95,6 @@ public  class HomeSectionAdapter extends RecyclerView.Adapter<HomeSectionAdapter
 
         private TextView mTxtTitle;
 
-
         private TextView mTxtDirectoryName;
 
         private TextView mTxtDate;

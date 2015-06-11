@@ -16,6 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import com.mopub.mobileads.MoPubErrorCode;
+import com.mopub.mobileads.MoPubView;
 
 /*Copyright 2015 Himanshu Mistri
 
@@ -30,7 +34,7 @@ import android.view.View;
         WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
         See the License for the specific language governing permissions and
         limitations under the License.*/
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity{
 
 
     private RecyclerView mRecyclerView;
@@ -42,6 +46,8 @@ public class HomeActivity extends AppCompatActivity {
     private Toolbar mToolBarHome;
 
     private FloatingActionButton mFloatingAb;
+
+    private MoPubView mMopubView;
 
 private AppCompatButton mAppCampatBtn;
 
@@ -57,6 +63,45 @@ private AppCompatButton mAppCampatBtn;
 
 
     private void initView(){
+
+        mMopubView=(MoPubView)findViewById(R.id.adview);
+
+        mMopubView.setAdUnitId("a24d46a1b7434c6bba803e6b53ce55a0");
+
+        mMopubView.setAutorefreshEnabled(true);
+
+        mMopubView.setBannerAdListener(new MoPubView.BannerAdListener() {
+            @Override
+            public void onBannerLoaded(MoPubView banner) {
+
+                Toast.makeText(getApplicationContext(),
+                        "Banner successfully loaded.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onBannerFailed(MoPubView banner, MoPubErrorCode errorCode) {
+
+            }
+
+            @Override
+            public void onBannerClicked(MoPubView banner) {
+
+            }
+
+            @Override
+            public void onBannerExpanded(MoPubView banner) {
+
+            }
+
+            @Override
+            public void onBannerCollapsed(MoPubView banner) {
+
+            }
+        });
+
+
+
+        mMopubView.loadAd();
 
         int[][] states = new int[][] {
                 new int[] { android.R.attr.state_enabled}, // enabled
@@ -153,5 +198,13 @@ private AppCompatButton mAppCampatBtn;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mMopubView.destroy();
     }
 }
