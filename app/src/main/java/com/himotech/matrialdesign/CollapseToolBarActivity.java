@@ -180,6 +180,9 @@ public class CollapseToolBarActivity extends AppCompatActivity {
 
         mRecycleList.setAdapter(mHomeSectionAdapter);
 
+
+
+
        // mRecycleList.setAdapter(mHomeListAdapter);
     }
 

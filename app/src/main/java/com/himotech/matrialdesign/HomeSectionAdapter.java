@@ -1,6 +1,7 @@
 package com.himotech.matrialdesign;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -112,6 +113,15 @@ public  class HomeSectionAdapter extends RecyclerView.Adapter<HomeSectionAdapter
                 mTxtDate=(TextView)itemView.findViewById(R.id.txt_created_date);
                 mImgBtn=(ImageButton)itemView.findViewById(R.id.img_btn);
 
+
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent mStartDrawer=new Intent(_Context,DrawerNewActivity.class);
+                        _Context.startActivity(mStartDrawer);
+                    }
+                });
             }else{
                 mTxtTitle=(TextView)itemView.findViewById(R.id.txt_title_section);
             }

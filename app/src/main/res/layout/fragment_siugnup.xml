@@ -1,0 +1,247 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.himotech.fragments.SiugnupFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"        >
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context="com.himotech.matrialdesign.DrawerNewActivity" >
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edittext_bck">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:focusableInTouchMode="true">
+
+
+                        <EditText
+                            android:id="@+id/txtname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect_txt_newuser"
+                            android:hint="Enter username"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:padding="8dp"
+                            android:textSize="16sp"
+                            style="@style/Widget.AppCompat.EditText"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="5dp"  >
+
+
+                        <EditText
+                            android:id="@+id/txtemail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect_txt_newuser"
+                            android:hint="Enter E-mail"
+                            android:ems="10"
+                            android:inputType="textEmailAddress"
+                            android:padding="8dp"
+                            android:textSize="16sp"
+                            style="@style/Widget.AppCompat.EditText"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="5dp" >
+
+
+                        <EditText
+                            android:id="@+id/txtadd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect_txt_newuser"
+                            android:hint="Enter address"
+                            android:ems="10"
+                            android:inputType="textPostalAddress"
+                            android:padding="8dp"
+                            android:textSize="16sp"
+                            style="@style/Widget.AppCompat.EditText"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginTop="5dp" >
+
+
+                        <EditText
+                            android:id="@+id/txtphone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect_txt_newuser"
+                            android:hint="Enter phone no."
+                            android:ems="10"
+                            android:inputType="textPhonetic"
+                            android:padding="8dp"
+                            android:textSize="16sp"
+                            style="@style/Widget.AppCompat.EditText"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/edittext_bck"
+                    android:orientation="vertical">
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp">
+
+
+                        <EditText
+                            android:id="@+id/txtpwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect_txt_newuser"
+                            android:hint="Enter password"
+                            android:ems="10"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textSize="16sp"
+                            style="@style/Widget.AppCompat.EditText"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp">
+
+
+                        <EditText
+                            android:id="@+id/txtcpwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rect_txt_newuser"
+                            android:hint="Conformation password"
+                            android:ems="10"
+                            android:inputType="textPassword"
+                            android:padding="8dp"
+                            android:textSize="16sp"
+                            style="@style/Widget.AppCompat.EditText"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3">
+
+
+
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/oval_shape_btn"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:text="Sign up" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -20,6 +20,14 @@
             android:name=".CollapseToolBarActivity"
             android:label="@string/title_activity_collapse_tool_bar" >
         </activity>
+        <activity
+            android:name=".NavigationDraweActivity"
+            android:label="@string/title_activity_navigation_drawe" >
+        </activity>
+        <activity
+            android:name=".DrawerNewActivity"
+            android:label="@string/title_activity_drawer_new" >
+        </activity>
     </application>
 
 </manifest>

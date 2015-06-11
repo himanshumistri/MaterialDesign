@@ -52,7 +52,6 @@
        android:layout_marginLeft="15dp"
         app:layout_anchor="@+id/apbar_collapse"
         app:layout_anchorGravity="bottom|left"
-
         android:src="@drawable/ic_content_add"
         app:fabSize="mini"
         />
