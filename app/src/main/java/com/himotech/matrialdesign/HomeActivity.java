@@ -3,14 +3,18 @@ package com.himotech.matrialdesign;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -18,6 +22,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.himotech.fragments.RecycleListFragment;
+import com.himotech.fragments.SiugnupFragment;
 import com.mopub.mobileads.MoPubErrorCode;
 import com.mopub.mobileads.MoPubView;
 
@@ -34,7 +40,7 @@ import com.mopub.mobileads.MoPubView;
         WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
         See the License for the specific language governing permissions and
         limitations under the License.*/
-public class HomeActivity extends AppCompatActivity{
+public class HomeActivity extends AppCompatActivity implements SiugnupFragment.OnFragmentInteractionListener {
 
 
     private RecyclerView mRecyclerView;
@@ -49,7 +55,12 @@ public class HomeActivity extends AppCompatActivity{
 
     private MoPubView mMopubView;
 
-private AppCompatButton mAppCampatBtn;
+    private AppCompatButton mAppCampatBtn;
+
+    private ViewPager mViewPager;
+
+    private PagerAdapter mPagerAdapter;
+
 
 
     @Override
@@ -69,6 +80,13 @@ private AppCompatButton mAppCampatBtn;
         mMopubView.setAdUnitId("a24d46a1b7434c6bba803e6b53ce55a0");
 
         mMopubView.setAutorefreshEnabled(true);
+
+
+        mPagerAdapter=new PagerAdapter(getSupportFragmentManager(),this);
+
+        mViewPager=(ViewPager)findViewById(R.id.viewpager);
+
+        mViewPager.setAdapter(mPagerAdapter);
 
         mMopubView.setBannerAdListener(new MoPubView.BannerAdListener() {
             @Override
@@ -126,30 +144,58 @@ private AppCompatButton mAppCampatBtn;
 
         mToolBarHome.setTitle(com.himotech.matrialdesign.R.string.app_name);
 
-        mRecyclerView=(RecyclerView)findViewById(com.himotech.matrialdesign.R.id.list_recycle);
+        //mRecyclerView=(RecyclerView)findViewById(com.himotech.matrialdesign.R.id.list_recycle);
 
         mFloatingAb=(FloatingActionButton)findViewById(com.himotech.matrialdesign.R.id.floatin_ab_home);
 
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
         mTabLayout=(TabLayout)findViewById(com.himotech.matrialdesign.R.id.tab_layout);
 
 
 
+        /*mTabLayout.addTab(mTabLayout.newTab().setCustomView(R.layout.custom_tab_layout));
+
+        mTabLayout.addTab(mTabLayout.newTab().setCustomView(R.layout.custom_tab_layout));
+
+        mTabLayout.addTab(mTabLayout.newTab().setCustomView(R.layout.custom_tab_layout));*/
+
         mTabLayout.addTab(mTabLayout.newTab().setText("Tab One"));
 
         mTabLayout.addTab(mTabLayout.newTab().setText("Tab Two"));
 
-        mTabLayout.addTab(mTabLayout.newTab().setText("Tab Three"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("Tab Third"));
 
 
+
+       // mTabLayout.setTabsFromPagerAdapter(mPagerAdapter);
+
+        mTabLayout.setupWithViewPager(mViewPager);
 
         mHomeListAdapter=new HomeListAdapter();
 
 
-        mRecyclerView.setAdapter(mHomeListAdapter);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                //mTabLayout.setScrollPosition(position,positionOffset,true);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        //mRecyclerView.setAdapter(mHomeListAdapter);
 
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
@@ -167,6 +213,12 @@ private AppCompatButton mAppCampatBtn;
     }
 
 
+    public void onClickSignup(View mView){
+
+        Intent mImIntent=new Intent(this,AdsListActivity.class);
+        startActivity(mImIntent);
+
+    }
 
 
     public void startNextScreen(View mView){
@@ -177,6 +229,58 @@ private AppCompatButton mAppCampatBtn;
         startActivity(mStartNext);
 
     }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
+
+    public static class PagerAdapter extends FragmentPagerAdapter{
+
+        private String tabTitles[] = new String[] { "Tab One", "Tab Two", "Tab Three" };
+
+        private HomeActivity mHomeActivity;
+
+        public PagerAdapter(FragmentManager fm,HomeActivity mHomeActivity) {
+            super(fm);
+            this.mHomeActivity=mHomeActivity;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+
+            switch(position){
+                case 0:
+                    return new RecycleListFragment();
+                case 1:
+                    return new SiugnupFragment();
+                case 2:
+                    return new SiugnupFragment();
+            }
+
+            return new SiugnupFragment();
+        }
+
+        @Override
+        public int getCount() {
+            return 3;
+        }
+
+        @Override
+        public int getItemPosition(Object object) {
+            return super.getItemPosition(object);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            // Generate title based on item position
+            return tabTitles[position];
+        }
+    }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

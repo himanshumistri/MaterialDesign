@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:gravity="center_vertical|center_horizontal"
+    android:padding="5dp"
+    android:background="@drawable/bg_tab_selector"
+    >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_social_share"
+
+    />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/drawer_txt_menu_selector"
+        android:id="@+id/txt_tab_name"
+        android:text="Tab Name"
+        />
+</LinearLayout>

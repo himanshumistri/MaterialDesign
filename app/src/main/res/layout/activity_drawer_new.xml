@@ -37,11 +37,15 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/drawer_header"
         app:menu="@menu/menu_drawer_new"
-        app:itemBackground="@color/white"
         app:itemTextColor="@color/drawer_txt_menu_selector"
         app:itemIconTint="@color/drawer_menu_selector"
         android:id="@+id/navigation_view"
+        android:background="@color/white"
         />
 
+    <!--app:itemBackground="@color/white"
+    app:itemTextColor="@color/drawer_txt_menu_selector"
+    app:itemIconTint="@color/drawer_menu_selector"
+-->
 
 </android.support.v4.widget.DrawerLayout>

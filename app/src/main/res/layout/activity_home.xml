@@ -11,9 +11,10 @@
         android:id="@+id/coodinate_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/btn_next_screen">
+        android:layout_above="@+id/btn_next_screen"
+        >
 
-        <android.support.v7.widget.RecyclerView
+        <!--<android.support.v7.widget.RecyclerView
             android:id="@+id/list_recycle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,7 +22,17 @@
             android:background="@color/white"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
+            />-->
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/viewpager"
             />
+
         <android.support.design.widget.AppBarLayout
             android:id="@+id/abar_layout"
             android:layout_width="match_parent"
@@ -42,12 +53,20 @@
                 android:id="@+id/tab_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabBackground="@color/tab_bg"
-                app:tabIndicatorColor="@color/tab_indicator"
-                app:tabIndicatorHeight="5dp"
-                app:tabMode="fixed"
+
+               style="@style/DesignTabLayout"
+
 
                 ></android.support.design.widget.TabLayout>
+
+            <!--app:tabBackground="@color/tab_bg"
+app:tabMode="fixed"
+app:tabIndicatorHeight="5dp"
+            --> <!--  app:tabBackground="@color/tab_bg"
+                app:tabIndicatorColor="@color/tab_indicator"
+                app:tabIndicatorHeight="5dp"
+-->
+
 
 
         </android.support.design.widget.AppBarLayout>
@@ -57,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            app:layout_anchor="@+id/list_recycle"
+            app:layout_anchor="@+id/viewpager"
             app:layout_anchorGravity="bottom|right"
             android:id="@+id/floatin_ab_home"
             app:fabSize="mini"

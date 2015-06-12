@@ -16,27 +16,24 @@
 
         <item name="drawerArrowStyle">@style/Designtheme.DrawerArrowStyle</item>
 
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+<!--<item name="android:tabWidgetStyle">@style/DesignTabLayout</item>-->
 
-        <!--<item name="android:tabWidgetStyle">@style/DesignTabLayout</item>-->
-
-
-    </style>
-
-
-    <style name="Designtheme.DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
-        <item name="spinBars">true</item>
-        <item name="color">@android:color/white</item>
     </style>
 
 
     <style name="DesignTabLayout" parent="Widget.Design.TabLayout">
 
-
+       <!-- <item name="tabBackground">@color/tab_bg</item>-->
         <item name="tabIndicatorColor">@color/tab_indicator</item>
 
 
     </style>
 
-    <!--<item name="tabBackground">@color/tab_bg</item>-->
+    <style name="Designtheme.DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
 
 </resources>
