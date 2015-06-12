@@ -37,6 +37,13 @@
 
     </style>
 
+    <style name="DesignEditext" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">@color/accent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+
+    </style>
+
+
     <!--<item name="tabBackground">@color/tab_bg</item>-->
 
 </resources>
