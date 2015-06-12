@@ -17,4 +17,6 @@ App that uses RecycleView and AppCompactButton ,CollapsingToolbarLayout.
         limitations under the License.*/
 
 
-https://raw.githubusercontent.com/Himanshu4003/MaterialDesign/master/HomeScreen.png
+With the help of CoordinatorLayout,AppBarLayout and TabLayout ,FloatingActionButton .you can create screen like below one .
+
+![alt tag](https://raw.githubusercontent.com/Himanshu4003/MaterialDesign/master/HomeScreen.png)
