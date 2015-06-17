@@ -14,12 +14,12 @@ import static com.mopub.common.ClientMetadata.MoPubNetworkType;
 
 public abstract class BaseEvent {
 
-    public static enum ScribeCategory {
+    public enum ScribeCategory {
         EXCHANGE_CLIENT_EVENT("exchange_client_event"),
         EXCHANGE_CLIENT_ERROR("exchange_client_error");
 
         @NonNull private final String mScribeCategory;
-        private ScribeCategory(@NonNull String scribeCategory) {
+        ScribeCategory(@NonNull String scribeCategory) {
             mScribeCategory = scribeCategory;
         }
 
@@ -29,13 +29,13 @@ public abstract class BaseEvent {
         }
     }
 
-    public static enum SdkProduct {
+    public enum SdkProduct {
         NONE(0),
         WEB_VIEW(1),
         NATIVE(2);
 
         private final int mType;
-        private SdkProduct(int type) {
+        SdkProduct(int type) {
             mType = type;
         }
 
@@ -44,14 +44,14 @@ public abstract class BaseEvent {
         }
     }
 
-    public static enum AppPlatform {
+    public enum AppPlatform {
         NONE(0),
         IOS(1),
         ANDROID(2),
         MOBILE_WEB(3);
 
         private final int mType;
-        private AppPlatform(int type) {
+        AppPlatform(int type) {
             mType = type;
         }
 
@@ -66,7 +66,7 @@ public abstract class BaseEvent {
         CLICK_REQUEST("click_request");
 
         @NonNull private final String mName;
-        private Name(@NonNull String name) {
+        Name(@NonNull String name) {
             mName = name;
         }
 
@@ -80,7 +80,7 @@ public abstract class BaseEvent {
         REQUESTS("requests");
 
         @NonNull private final String mCategory;
-        private Category(@NonNull String category) {
+        Category(@NonNull String category) {
             mCategory = category;
         }
 
@@ -94,7 +94,7 @@ public abstract class BaseEvent {
         AD_REQUEST(0.1);
 
         private final double mSamplingRate;
-        private SamplingRate(double samplingRate) {
+        SamplingRate(double samplingRate) {
             mSamplingRate = samplingRate;
         }
 

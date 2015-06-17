@@ -41,7 +41,7 @@ class VisibilityTracker {
     private long mAccessCounter = 0;
 
     // Listener that passes all visible and invisible views when a visibility check occurs
-    static interface VisibilityTrackerListener {
+    interface VisibilityTrackerListener {
         void onVisibilityChanged(List<View> visibleViews, List<View> invisibleViews);
     }
 

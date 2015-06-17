@@ -35,19 +35,19 @@ public class MoPubInterstitial implements CustomEventInterstitialAdapter.CustomE
     private boolean mIsDestroyed;
 
     public interface InterstitialAdListener {
-        public void onInterstitialLoaded(MoPubInterstitial interstitial);
-        public void onInterstitialFailed(MoPubInterstitial interstitial, MoPubErrorCode errorCode);
-        public void onInterstitialShown(MoPubInterstitial interstitial);
-        public void onInterstitialClicked(MoPubInterstitial interstitial);
-        public void onInterstitialDismissed(MoPubInterstitial interstitial);
+        void onInterstitialLoaded(MoPubInterstitial interstitial);
+        void onInterstitialFailed(MoPubInterstitial interstitial, MoPubErrorCode errorCode);
+        void onInterstitialShown(MoPubInterstitial interstitial);
+        void onInterstitialClicked(MoPubInterstitial interstitial);
+        void onInterstitialDismissed(MoPubInterstitial interstitial);
     }
 
     private MoPubInterstitialListener mListener;
 
     @Deprecated
     public interface MoPubInterstitialListener {
-        public void OnInterstitialLoaded();
-        public void OnInterstitialFailed();
+        void OnInterstitialLoaded();
+        void OnInterstitialFailed();
     }
 
     public MoPubInterstitial(Activity activity, String id) {

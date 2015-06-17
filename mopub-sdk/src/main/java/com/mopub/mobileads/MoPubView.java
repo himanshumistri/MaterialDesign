@@ -29,11 +29,11 @@ import static com.mopub.mobileads.MoPubErrorCode.ADAPTER_NOT_FOUND;
 
 public class MoPubView extends FrameLayout {
     public interface BannerAdListener {
-        public void onBannerLoaded(MoPubView banner);
-        public void onBannerFailed(MoPubView banner, MoPubErrorCode errorCode);
-        public void onBannerClicked(MoPubView banner);
-        public void onBannerExpanded(MoPubView banner);
-        public void onBannerCollapsed(MoPubView banner);
+        void onBannerLoaded(MoPubView banner);
+        void onBannerFailed(MoPubView banner, MoPubErrorCode errorCode);
+        void onBannerClicked(MoPubView banner);
+        void onBannerExpanded(MoPubView banner);
+        void onBannerCollapsed(MoPubView banner);
     }
 
     public static final int DEFAULT_LOCATION_PRECISION = 6;
@@ -405,32 +405,32 @@ public class MoPubView extends FrameLayout {
 
     @Deprecated
     public interface OnAdWillLoadListener {
-        public void OnAdWillLoad(MoPubView m, String url);
+        void OnAdWillLoad(MoPubView m, String url);
     }
 
     @Deprecated
     public interface OnAdLoadedListener {
-        public void OnAdLoaded(MoPubView m);
+        void OnAdLoaded(MoPubView m);
     }
 
     @Deprecated
     public interface OnAdFailedListener {
-        public void OnAdFailed(MoPubView m);
+        void OnAdFailed(MoPubView m);
     }
 
     @Deprecated
     public interface OnAdClosedListener {
-        public void OnAdClosed(MoPubView m);
+        void OnAdClosed(MoPubView m);
     }
 
     @Deprecated
     public interface OnAdClickedListener {
-        public void OnAdClicked(MoPubView m);
+        void OnAdClicked(MoPubView m);
     }
 
     @Deprecated
     public interface OnAdPresentedOverlayListener {
-        public void OnAdPresentedOverlay(MoPubView m);
+        void OnAdPresentedOverlay(MoPubView m);
     }
 
     @Deprecated

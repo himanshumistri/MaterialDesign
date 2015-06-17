@@ -10,7 +10,7 @@ import com.mopub.mobileads.MoPubRewardedVideoManager;
 public class MoPub {
     public static final String SDK_VERSION = "3.8.0";
 
-    public static enum LocationAwareness { NORMAL, TRUNCATED, DISABLED }
+    public enum LocationAwareness { NORMAL, TRUNCATED, DISABLED }
 
     private static final int DEFAULT_LOCATION_PRECISION = 6;
     private static volatile LocationAwareness sLocationLocationAwareness = LocationAwareness.NORMAL;

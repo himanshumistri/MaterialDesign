@@ -28,7 +28,7 @@ public enum ResponseHeader {
     @Deprecated CUSTOM_SELECTOR("X-Customselector");
 
     private final String key;
-    private ResponseHeader(String key) {
+    ResponseHeader(String key) {
         this.key = key;
     }
 

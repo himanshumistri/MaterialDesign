@@ -24,7 +24,7 @@ public enum MoPubErrorCode {
 
     private final String message;
 
-    private MoPubErrorCode(String message) {
+    MoPubErrorCode(String message) {
         this.message = message;
     }
 

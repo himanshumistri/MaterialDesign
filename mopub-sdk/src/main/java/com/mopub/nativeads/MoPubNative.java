@@ -37,8 +37,8 @@ import static com.mopub.nativeads.NativeErrorCode.UNSPECIFIED;
 public class MoPubNative {
 
     public interface MoPubNativeNetworkListener {
-        public void onNativeLoad(final NativeResponse nativeResponse);
-        public void onNativeFail(final NativeErrorCode errorCode);
+        void onNativeLoad(final NativeResponse nativeResponse);
+        void onNativeFail(final NativeErrorCode errorCode);
     }
 
     static final MoPubNativeNetworkListener EMPTY_NETWORK_LISTENER = new
@@ -65,8 +65,8 @@ public class MoPubNative {
     };
 
     public interface MoPubNativeEventListener {
-        public void onNativeImpression(final View view);
-        public void onNativeClick(final View view);
+        void onNativeImpression(final View view);
+        void onNativeClick(final View view);
     }
 
     /**
@@ -154,7 +154,7 @@ public class MoPubNative {
     }
 
     public void makeRequest() {
-        makeRequest((RequestParameters)null);
+        makeRequest(null);
     }
 
     public void makeRequest(@Nullable final RequestParameters requestParameters) {

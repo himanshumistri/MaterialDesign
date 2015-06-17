@@ -32,7 +32,7 @@ public class AdTypeTranslator {
         private final String mKey;
         private final String mClassName;
 
-        private CustomEventType(String key, String className) {
+        CustomEventType(String key, String className) {
             mKey = key;
             mClassName = className;
         }

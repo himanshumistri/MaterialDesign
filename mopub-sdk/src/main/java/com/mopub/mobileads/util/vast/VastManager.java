@@ -19,7 +19,7 @@ import static com.mopub.mobileads.util.vast.VastXmlManagerAggregator.VastXmlMana
 
 public class VastManager implements VastXmlManagerAggregatorListener {
     public interface VastManagerListener {
-        public void onVastVideoConfigurationPrepared(final VastVideoConfiguration vastVideoConfiguration);
+        void onVastVideoConfigurationPrepared(final VastVideoConfiguration vastVideoConfiguration);
     }
 
     private static final double ASPECT_RATIO_WEIGHT = 40;

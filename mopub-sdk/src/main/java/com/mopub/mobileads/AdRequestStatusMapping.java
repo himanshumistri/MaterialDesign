@@ -98,7 +98,7 @@ public class AdRequestStatusMapping {
         }
     }
 
-    private static enum LoadingStatus { LOADING, LOADED, PLAYED }
+    private enum LoadingStatus { LOADING, LOADED, PLAYED }
     private static class AdRequestStatus {
         @NonNull
         private LoadingStatus mLoadingStatus;

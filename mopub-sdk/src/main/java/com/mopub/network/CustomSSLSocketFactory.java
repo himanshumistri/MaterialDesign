@@ -37,14 +37,14 @@ public class CustomSSLSocketFactory extends SSLSocketFactory {
     }
 
     @Override
-    public Socket createSocket(final String host, final int i) throws IOException, UnknownHostException {
+    public Socket createSocket(final String host, final int i) throws IOException {
         final Socket socket = mCertificateSocketFactory.createSocket(host, i);
         enableTlsIfAvailable(socket);
         return socket;
     }
 
     @Override
-    public Socket createSocket(final String host, final int port, final InetAddress localhost, final int localPort) throws IOException, UnknownHostException {
+    public Socket createSocket(final String host, final int port, final InetAddress localhost, final int localPort) throws IOException {
         final Socket socket = mCertificateSocketFactory.createSocket(host, port, localhost, localPort);
         enableTlsIfAvailable(socket);
         return socket;

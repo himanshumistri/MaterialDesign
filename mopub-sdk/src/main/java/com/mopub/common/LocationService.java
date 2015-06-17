@@ -10,7 +10,7 @@ import com.mopub.common.logging.MoPubLog;
 import java.math.BigDecimal;
 
 public class LocationService {
-    public static enum LocationAwareness {
+    public enum LocationAwareness {
         NORMAL, TRUNCATED, DISABLED;
 
         // These deprecated methods are only used to support the deprecated methods

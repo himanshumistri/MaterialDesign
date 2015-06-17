@@ -71,7 +71,7 @@ public class AdAlertGestureListener extends GestureDetector.SimpleOnGestureListe
     }
 
     void finishGestureDetection() {
-        if (mCurrentZigZagState == mCurrentZigZagState.FINISHED) {
+        if (mCurrentZigZagState == ZigZagState.FINISHED) {
             mAdAlertReporter = new AdAlertReporter(mView.getContext(), mView, mAdReport);
             mAdAlertReporter.send();
         }

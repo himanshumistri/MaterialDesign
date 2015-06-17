@@ -26,9 +26,9 @@ import static com.mopub.nativeads.CustomEventNative.ImageListener;
 abstract class BaseForwardingNativeAd implements NativeAdInterface {
     private static final int IMPRESSION_MIN_PERCENTAGE_VIEWED = 50;
 
-    static interface NativeEventListener {
-        public void onAdImpressed();
-        public void onAdClicked();
+    interface NativeEventListener {
+        void onAdImpressed();
+        void onAdClicked();
     }
     @Nullable private NativeEventListener mNativeEventListener;
 

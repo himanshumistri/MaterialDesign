@@ -22,7 +22,7 @@ public enum NativeErrorCode {
 
     private final String message;
 
-    private NativeErrorCode(String message) {
+    NativeErrorCode(String message) {
         this.message = message;
     }
 

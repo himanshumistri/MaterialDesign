@@ -19,6 +19,7 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
 <!--<item name="android:tabWidgetStyle">@style/DesignTabLayout</item>-->
+        <item name="colorControlNormal">@color/white</item>
 
     </style>
 
@@ -34,6 +35,18 @@
     <style name="Designtheme.DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textColorHighlight">@color/accent</item>
+    </style>
+
+    <style name="DesignEditext" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">@color/hint_text_color_selector</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:cacheColorHint">@color/hint_text_color_selector</item>
+
     </style>
 
 </resources>

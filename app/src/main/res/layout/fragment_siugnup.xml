@@ -1,6 +1,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.himotech.fragments.SiugnupFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context="com.himotech.fragments.SiugnupFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -43,20 +47,25 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="10dp"
-                        android:focusableInTouchMode="true">
+                        android:focusableInTouchMode="true"
+
+                        >
 
 
                         <EditText
                             android:id="@+id/txtname"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/rect_txt_newuser"
+
                             android:hint="Enter username"
                             android:ems="10"
                             android:inputType="textPersonName"
                             android:padding="8dp"
                             android:textSize="16sp"
-                            style="@style/DesignEditext"
+
+                            android:text="Himanshu Mistri"
+                            android:textColorHint="@color/accent"
+
                             />
 
                     </android.support.design.widget.TextInputLayout>
@@ -68,19 +77,23 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:focusableInTouchMode="true"
-                        android:layout_marginTop="5dp"  >
+                        android:layout_marginTop="5dp"
+
+                        >
 
 
                         <EditText
                             android:id="@+id/txtemail"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/rect_txt_newuser"
+
                             android:hint="Enter E-mail"
                             android:ems="10"
                             android:inputType="textEmailAddress"
+                            android:text="Himanshu.Mistri@email.com"
                             android:padding="8dp"
                             android:textSize="16sp"
+                            android:textColorHint="@color/blue"
                             style="@style/DesignEditext"
                             />
 

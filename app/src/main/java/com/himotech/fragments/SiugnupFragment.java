@@ -102,7 +102,8 @@ public class SiugnupFragment extends Fragment {
         mSignup = (Button)mView.findViewById(R.id.btnSignup);
 
 
-
+        mName.setHintTextColor(getResources().getColor(R.color.accent));
+        mName.setTextColor(getResources().getColor(R.color.accent));
 
 
 
@@ -145,7 +146,7 @@ public class SiugnupFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(Uri uri);
     }
 
 }

@@ -47,7 +47,7 @@ public class DeviceUtils {
 
     private DeviceUtils() {}
 
-    public static enum ForceOrientation {
+    public enum ForceOrientation {
         FORCE_PORTRAIT("portrait"),
         FORCE_LANDSCAPE("landscape"),
         DEVICE_ORIENTATION("device"),
@@ -55,7 +55,7 @@ public class DeviceUtils {
 
         @NonNull private final String mKey;
 
-        private ForceOrientation(@NonNull final String key) {
+        ForceOrientation(@NonNull final String key) {
             mKey = key;
         }
 
@@ -71,7 +71,7 @@ public class DeviceUtils {
         }
     }
 
-    public static enum IP {
+    public enum IP {
         IPv4,
         IPv6;
 

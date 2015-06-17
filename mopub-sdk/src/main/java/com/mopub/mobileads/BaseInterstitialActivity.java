@@ -26,7 +26,7 @@ abstract class BaseInterstitialActivity extends Activity {
         WEB_VIEW_DID_CLOSE("webviewDidClose();");
 
         private String mJavascript;
-        private JavaScriptWebViewCallbacks(String javascript) {
+        JavaScriptWebViewCallbacks(String javascript) {
             mJavascript = javascript;
         }
 

@@ -49,7 +49,7 @@ public class CloseableLayout extends FrameLayout {
      * <a href="http://www.iab.net/media/file/IAB_MRAID_v2_FINAL.pdf">MRAID 2.0
      * specification</a>.
      */
-    public static enum ClosePosition {
+    public enum ClosePosition {
         TOP_LEFT(Gravity.TOP | Gravity.LEFT),
         TOP_CENTER(Gravity.TOP | Gravity.CENTER_HORIZONTAL),
         TOP_RIGHT(Gravity.TOP | Gravity.RIGHT),

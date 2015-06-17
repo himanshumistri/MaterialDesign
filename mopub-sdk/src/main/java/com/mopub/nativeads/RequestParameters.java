@@ -19,7 +19,7 @@ public class RequestParameters {
 
         private final String mAssetName;
 
-        private NativeAdAsset(@NonNull String assetName) {
+        NativeAdAsset(@NonNull String assetName) {
             mAssetName = assetName;
         }
 

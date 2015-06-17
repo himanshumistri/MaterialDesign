@@ -250,6 +250,6 @@ class XmlUtils {
     }
 
     public interface NodeProcessor<T> {
-        public T process(Node node);
+        T process(Node node);
     }
 }

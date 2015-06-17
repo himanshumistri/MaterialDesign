@@ -12,8 +12,8 @@ public class DownloadTask extends AsyncTask<HttpUriRequest, Void, DownloadRespon
     private final DownloadTaskListener mDownloadTaskListener;
     private String mUrl;
 
-    public static interface DownloadTaskListener {
-        abstract void onComplete(String url, DownloadResponse downloadResponse);
+    public interface DownloadTaskListener {
+        void onComplete(String url, DownloadResponse downloadResponse);
     }
 
     public DownloadTask(final DownloadTaskListener downloadTaskListener) throws IllegalArgumentException {

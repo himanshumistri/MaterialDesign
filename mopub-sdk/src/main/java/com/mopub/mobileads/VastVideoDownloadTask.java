@@ -18,7 +18,7 @@ public class VastVideoDownloadTask extends AsyncTask<String, Void, Boolean> {
     private static final int MAX_VIDEO_SIZE = 25 * 1024 * 1024; // 25 MiB
 
     public interface VastVideoDownloadTaskListener {
-        public void onComplete(boolean success);
+        void onComplete(boolean success);
     }
 
     private final VastVideoDownloadTaskListener mVastVideoDownloadTaskListener;

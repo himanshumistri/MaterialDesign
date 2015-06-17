@@ -49,14 +49,14 @@ public class ClientMetadata {
     private boolean mDoNotTrack = false;
     private boolean mAdvertisingInfoSet = false;
 
-    public static enum MoPubNetworkType {
+    public enum MoPubNetworkType {
         UNKNOWN(0),
         ETHERNET(1),
         WIFI(2),
         MOBILE(3);
 
         private final int mId;
-        private MoPubNetworkType(int id) {
+        MoPubNetworkType(int id) {
             mId = id;
         }
 

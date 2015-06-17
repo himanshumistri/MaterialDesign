@@ -55,15 +55,15 @@ public class MraidController {
     private final AdReport mAdReport;
 
     public interface MraidListener {
-        public void onLoaded(View view);
-        public void onFailedToLoad();
-        public void onExpand();
-        public void onOpen();
-        public void onClose();
+        void onLoaded(View view);
+        void onFailedToLoad();
+        void onExpand();
+        void onOpen();
+        void onClose();
     }
 
     public interface UseCustomCloseListener {
-        public void useCustomCloseChanged(boolean useCustomClose);
+        void useCustomCloseChanged(boolean useCustomClose);
     }
 
     /**
@@ -486,8 +486,8 @@ public class MraidController {
                 mTwoPartBridge.notifySupports(
                         mMraidNativeCommandHandler.isSmsAvailable(mContext),
                         mMraidNativeCommandHandler.isTelAvailable(mContext),
-                        mMraidNativeCommandHandler.isCalendarAvailable(mContext),
-                        mMraidNativeCommandHandler.isStorePictureSupported(mContext),
+                        MraidNativeCommandHandler.isCalendarAvailable(mContext),
+                        MraidNativeCommandHandler.isStorePictureSupported(mContext),
                         isInlineVideoAvailable());
                 mTwoPartBridge.notifyViewState(mViewState);
                 mTwoPartBridge.notifyPlacementType(mPlacementType);

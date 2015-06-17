@@ -47,7 +47,7 @@ public class AdRequest extends Request<AdResponse> {
     @NonNull private final Context mContext;
 
     public interface Listener extends Response.ErrorListener {
-        public void onSuccess(AdResponse response);
+        void onSuccess(AdResponse response);
     }
 
     public AdRequest(@NonNull final String url,
