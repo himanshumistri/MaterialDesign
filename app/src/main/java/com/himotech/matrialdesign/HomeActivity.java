@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity implements SiugnupFragment.O
     private void initView(){
 
         mMopubView=(MoPubView)findViewById(R.id.adview);
-
+//b35ad8db407a4961a93be42b48a09459
         mMopubView.setAdUnitId("b35ad8db407a4961a93be42b48a09459");
 
         mMopubView.setAutorefreshEnabled(true);

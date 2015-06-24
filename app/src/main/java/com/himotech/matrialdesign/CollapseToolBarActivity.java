@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.himotech.models.Items;
 
 import java.util.ArrayList;
@@ -57,6 +59,11 @@ public class CollapseToolBarActivity extends AppCompatActivity {
 
 
     private void  initView(){
+
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         mArrayList=new ArrayList<>();
 
